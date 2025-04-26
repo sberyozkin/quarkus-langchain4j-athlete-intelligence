@@ -1,0 +1,1 @@
+# quarkus-langchain4-athlete-intelligence
