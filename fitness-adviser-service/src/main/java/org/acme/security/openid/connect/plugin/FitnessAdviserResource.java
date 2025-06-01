@@ -2,7 +2,6 @@ package org.acme.security.openid.connect.plugin;
 
 import org.jboss.logging.Logger;
 
-import dev.langchain4j.agent.tool.Tool;
 import dev.langchain4j.model.chat.listener.ChatModelListener;
 import dev.langchain4j.model.chat.listener.ChatModelResponseContext;
 import io.quarkus.oidc.UserInfo;

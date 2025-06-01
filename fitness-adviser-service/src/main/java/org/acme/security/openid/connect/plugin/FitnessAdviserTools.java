@@ -3,8 +3,8 @@ package org.acme.security.openid.connect.plugin;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.acme.security.openid.connect.plugin.StravaClient.DetailedAthlete;
-import org.acme.security.openid.connect.plugin.StravaClient.SummaryGear;
+import org.acme.security.openid.connect.plugin.StravaAthleteClient.DetailedAthlete;
+import org.acme.security.openid.connect.plugin.StravaAthleteClient.SummaryGear;
 
 import dev.langchain4j.agent.tool.Tool;
 import io.quarkus.oidc.UserInfo;

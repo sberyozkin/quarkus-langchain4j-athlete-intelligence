@@ -5,7 +5,7 @@ import dev.langchain4j.service.UserMessage;
 import io.quarkiverse.langchain4j.RegisterAiService;
 import jakarta.enterprise.context.SessionScoped;
 
-@RegisterAiService(tools = { FitnessAdviserTools.class, StravaClient.class })
+@RegisterAiService(tools = { FitnessAdviserTools.class, StravaAthleteClient.class })
 @SessionScoped
 public interface FitnessAdviserService {
     @SystemMessage("""
