@@ -19,8 +19,12 @@ public class LogoutResource {
     @Inject
     OidcSession session;
 
+    @Inject
+    StravaSubscriptionManager subscriptionManager;
+
     @GET
     public Response logout(@Context UriInfo uriInfo) {
+        subscriptionManager.deleteSubscription();
         // remove the local session cookie
         session.logout().await().indefinitely();
         // redirect to the login page

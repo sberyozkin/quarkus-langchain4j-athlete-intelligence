@@ -1,5 +1,6 @@
 package org.acme.security.openid.connect.plugin;
 
+import io.quarkus.oidc.AccessTokenCredential;
 import io.quarkus.oidc.UserInfo;
 import io.quarkus.qute.Template;
 import io.quarkus.qute.TemplateInstance;
@@ -22,9 +23,16 @@ public class LoginResource {
     @Inject
     Template fitnessAdviser;
 
+    @Inject
+    AccessTokenCredential accessToken;
+
+    @Inject
+    StravaSubscriptionManager subscriptionManager;
+
     @GET
     @Produces("text/html")
     public TemplateInstance login() {
+        subscriptionManager.pushSubscription(accessToken.getToken());
         return fitnessAdviser.data("name", userInfo.getJsonObject().getString("firstname"));
     }
 }
