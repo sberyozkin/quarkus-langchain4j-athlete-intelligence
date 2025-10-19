@@ -1,5 +1,0 @@
-ngrok http --domain manatee-apparent-mayfly.ngrok-free.app 8082
-#ngrok http --domain manatee-apparent-mayfly.ngrok-free.app 8080 --scheme http
-ngrok tunnel --label edge=edghts_2jKsH5HsiOFC3lNfcU4DY0FOgsC http://localhost:8080
-
-https://stackoverflow.com/questions/73017353/how-to-bypass-ngrok-browser-warning
