@@ -25,16 +25,16 @@ public class StravaSubscriptionManager {
     @ConfigProperty(name = "quarkus.oidc.credentials.secret")
     String clientSecret;
 
-    @Inject
-    @ConfigProperty(name = "ngrok.host")
-    String ngrokHost;
+    //@Inject
+    //@ConfigProperty(name = "ngrok.host")
+    //String ngrokHost;
 
     volatile SubscriptionCreationResponse subscription;
 
     public void pushSubscription(String accessToken) {
-        subscription = stravaSubscriptionClient.pushSubscription(clientId, clientSecret,
-                "https://" + ngrokHost + "/subscription", accessToken);
-        log.debugf("Subscription %s is created", subscription.id());
+        //subscription = stravaSubscriptionClient.pushSubscription(clientId, clientSecret,
+        //        "https://" + ngrokHost + "/subscription", accessToken);
+        //log.debugf("Subscription %s is created", subscription.id());
 
     }
 

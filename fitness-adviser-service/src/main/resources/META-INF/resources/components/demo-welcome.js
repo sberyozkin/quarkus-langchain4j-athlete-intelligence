@@ -39,11 +39,19 @@ export class DemoWelcome extends LitElement {
     render() {
         return html`
             <div class="title">
-                <h1>Welcome to Strava Fitness Adviser</h1>
+                <h1>Welcome to Strava and Garmin Fitness Adviser</h1>
             </div>
             
             <div class="explanation">
-                <img src="images/chatbot-architecture.png"/>
+                <table>
+                   <tr>
+                     <img src="images/chatbot-architecture.png"/>
+                   </tr>
+                   <tr>
+                     <td><img src="images/strava.png" width="500"/></td>
+                     <td><img src="images/garmin.png"/></td>
+                   </tr>
+                 </table>
             </div>
             
             <div class="explanation">

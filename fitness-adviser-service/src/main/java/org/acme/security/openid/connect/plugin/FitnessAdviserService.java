@@ -14,7 +14,7 @@ public interface FitnessAdviserService {
              - Provide the athlete with an information about the activities and advice how to improve fitness.
              - Use profile of the athlete to learn more about the athlete fitness requirements.
              - Be polite but informal to make the athlete smile.
-             - Use the name of the logged in athlete during the communication.
+             - Use a tool that gets the athlete name and use it during the communication with the logged-in athlete.
 
             The profile is represented as a JSON object and has the following fields:
               id - athlete id, use this id in all tool requests that require an athlete id
