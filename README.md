@@ -87,7 +87,7 @@ graph TB
 
     subgraph "External Services"
         StravaOAuth[Strava OAuth/OIDC<br/>Authentication Provider]
-        StravaAPI[Strava API v3<br/>- /athletes/{id}/stats<br/>- /athlete/activities<br/>- /activities/{id}<br/>- /activities/{id}/laps<br/>- /activities/{id}/zones<br/>- /activities/{id}/streams<br/>- /activities/{id}/kudos<br/>- /athlete/routes]
+        StravaAPI["Strava API v3<br/>- /athletes/{id}/stats<br/>- /athlete/activities<br/>- /activities/{id}<br/>- /activities/{id}/laps<br/>- /activities/{id}/zones<br/>- /activities/{id}/streams<br/>- /activities/{id}/kudos<br/>- /athlete/routes"]
         GeminiAI[Google Gemini AI<br/>Chat Model<br/>LangChain4j Integration]
     end
 
@@ -128,7 +128,7 @@ graph TB
     %% Logout Flow
     Browser -->|24. Logout Request| LogoutResource
     LogoutResource -->|25. Delete Subscription| SubscriptionManager
-    SubscriptionManager -->|26. DELETE /push_subscriptions/{id}| StravaSubscriptionClient
+    SubscriptionManager -->|"26. DELETE /push_subscriptions/{id}"| StravaSubscriptionClient
     StravaSubscriptionClient -->|27. API Call| StravaAPI
     LogoutResource -->|28. Clear Session| OIDC
     LogoutResource -->|29. Redirect| Browser
