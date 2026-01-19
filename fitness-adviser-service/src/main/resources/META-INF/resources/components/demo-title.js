@@ -39,10 +39,10 @@ export class DemoTitle extends LitElement {
     render() {
         return html`
             <div class="title">
-                <h1>Strava and Garmin Fitness Adviser</h1>
+                <h1>Strava Fitness Adviser</h1>
             </div>
             <div class="explanation">
-                This demo introduces Strava and Garmin Fitness Adviser
+                This demo introduces Strava Fitness Adviser
             </div>
             
             <div class="explanation">
@@ -59,7 +59,6 @@ export class DemoTitle extends LitElement {
                 <table>
                    <tr>
                      <td><img src="images/strava.png" width="500"/></td>
-                     <td><img src="images/garmin.png"/></td>
                    </tr>
                    <tr>
                      <td><a href="login">Login</a></td>
