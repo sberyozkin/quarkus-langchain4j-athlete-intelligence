@@ -3,10 +3,10 @@ package org.acme.security.openid.connect.plugin;
 import dev.langchain4j.service.SystemMessage;
 import dev.langchain4j.service.UserMessage;
 import io.quarkiverse.langchain4j.RegisterAiService;
-import jakarta.enterprise.context.SessionScoped;
+import jakarta.enterprise.context.ApplicationScoped;
 
 @RegisterAiService(tools = { FitnessAdviserTools.class, StravaAthleteClient.class })
-@SessionScoped
+@ApplicationScoped
 public interface FitnessAdviserService {
     @SystemMessage("""
             You are an athlete fitness adviser.
@@ -15,6 +15,7 @@ public interface FitnessAdviserService {
              - Use profile of the athlete to learn more about the athlete fitness requirements.
              - Be polite but informal to make the athlete smile.
              - Use a tool that gets the athlete name and use it during the communication with the logged-in athlete.
+             - When activity IDs are provided in the user's question, automatically use the athleteActivity tool to get detailed information about those activities. Do not ask for activity IDs if they are already provided.
 
             The profile is represented as a JSON object and has the following fields:
               id - athlete id, use this id in all tool requests that require an athlete id
