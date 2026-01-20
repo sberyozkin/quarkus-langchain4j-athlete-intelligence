@@ -6,7 +6,7 @@ import java.util.List;
 import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
 
 import dev.langchain4j.agent.tool.Tool;
-import io.quarkus.oidc.token.propagation.AccessToken;
+import io.quarkus.oidc.token.propagation.common.AccessToken;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.PathParam;

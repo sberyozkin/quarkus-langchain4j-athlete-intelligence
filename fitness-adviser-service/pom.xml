@@ -1,8 +1,7 @@
-<?xml version="1.0"?>
-<project
-        xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
-        xmlns="http://maven.apache.org/POM/4.0.0"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.acme</groupId>
@@ -17,10 +16,10 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <quarkus.platform.artifact-id>quarkus-bom</quarkus.platform.artifact-id>
         <quarkus.platform.group-id>io.quarkus.platform</quarkus.platform.group-id>
-        <quarkus.platform.version>3.27.1</quarkus.platform.version>
+        <quarkus.platform.version>3.30.6</quarkus.platform.version>
         <skipITs>true</skipITs>
         <surefire-plugin.version>3.2.5</surefire-plugin.version>
-        <quarkus-langchain4j.version>1.5.0.CR2</quarkus-langchain4j.version>
+        <quarkus-langchain4j.version>1.5.0</quarkus-langchain4j.version>
     </properties>
 
     <dependencyManagement>
@@ -70,6 +69,11 @@
             <groupId>io.quarkus</groupId>
             <artifactId>quarkus-rest-client-oidc-token-propagation</artifactId>
         </dependency>
+        <dependency>
+            <groupId>io.quarkiverse.ngrok</groupId>
+            <artifactId>quarkus-ngrok</artifactId>
+            <version>1.8.0</version>
+        </dependency>
         <!-- UI -->
         <dependency>
             <groupId>io.mvnpm</groupId>
@@ -92,6 +96,15 @@
 
     <build>
         <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${compiler-plugin.version}</version>
+                <configuration>
+                    <release>17</release>
+                    <parameters>${maven.compiler.parameters}</parameters>
+                </configuration>
+            </plugin>
             <plugin>
                 <groupId>${quarkus.platform.group-id}</groupId>
                 <artifactId>quarkus-maven-plugin</artifactId>
