@@ -1,5 +1,22 @@
 # Fitness Adviser Service - Architecture Diagram
 
+here is what you need:
+
+- An  ngrok account and access token https://dashboard.ngrok.com/signup
+- A Strava Application and credentials. Log in to Strava and go to https://www.strava.com/settings/api and create an app.
+- A gemini API key (https://aistudio.google.com/api-keys)
+
+Create a file env.sh with the following entries where you put your ids and tokens.
+
+```bash
+export QUARKUS_OIDC_CLIENT_ID=
+export QUARKUS_OIDC_CREDENTIALS_SECRET=
+export AI_GEMINI_API_KEY=
+export QUARKUS_NGROK_AUTH_TOKEN=
+```
+
+
+
 ## High-Level Overview
 
 ```mermaid
