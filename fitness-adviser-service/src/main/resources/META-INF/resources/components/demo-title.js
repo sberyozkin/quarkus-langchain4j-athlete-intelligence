@@ -61,9 +61,12 @@ export class DemoTitle extends LitElement {
                      <td><img src="images/strava.png" width="500"/></td>
                    </tr>
                    <tr>
-                     <td><a href="login">Login</a></td>
+                     <td><a href="garmin"><img src="images/garmin-connect.png" width="100" height="100"/></a></td>
                    </tr>
-                 </table>
+				   <tr>
+                     <td><a href="apple"><img src="images/apple-health.png" width="100" height="100"/></a></td>
+                   </tr>
+                </table>
             </div>
         `
     }

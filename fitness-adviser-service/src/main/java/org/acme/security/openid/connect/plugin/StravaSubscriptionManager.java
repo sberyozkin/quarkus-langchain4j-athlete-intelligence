@@ -17,13 +17,13 @@ public class StravaSubscriptionManager {
     @RestClient
     StravaSubscriptionClient stravaSubscriptionClient;
 
-    @Inject
-    @ConfigProperty(name = "quarkus.oidc.client-id")
-    String clientId;
+    //@Inject
+    //@ConfigProperty(name = "quarkus.oidc.client-id")
+    //String clientId;
 
-    @Inject
-    @ConfigProperty(name = "quarkus.oidc.credentials.secret")
-    String clientSecret;
+    //@Inject
+    //@ConfigProperty(name = "quarkus.oidc.credentials.secret")
+    //String clientSecret;
 
     //@Inject
     //@ConfigProperty(name = "ngrok.host")
@@ -40,7 +40,7 @@ public class StravaSubscriptionManager {
 
     public void deleteSubscription() {
         if (subscription != null) {
-            stravaSubscriptionClient.deleteSubscription(subscription.id(), clientId, clientSecret);
+            //stravaSubscriptionClient.deleteSubscription(subscription.id(), clientId, clientSecret);
         }
     }
 }
